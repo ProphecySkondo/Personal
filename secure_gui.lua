@@ -1,3 +1,7 @@
+local get_fallback_func = get_fallback_func or function()
+	print("[-] Expected get_fallback_func")
+end
+
 local secure_gui = get_fallback_func("function", get_hidden_gui or gethui or function()
 	if getInstance("RobloxInternalFunctions") then
 		return getInstance("RobloxInternalFunctions")
