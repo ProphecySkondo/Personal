@@ -13,7 +13,7 @@ local function newInstance(Name, Properties, Bool: boolean)
 		["Class"] = instance.ClassName,
 		["Parent"] = instance.Parent,
 		["DebugId"] = _debugid,
-		["Path"] = getInstancePath(instance)
+		["Path"] = get_instance_path(instance)
 	}
 
 	if Bool then
