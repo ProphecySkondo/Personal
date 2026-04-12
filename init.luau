@@ -117,7 +117,9 @@ local trusted = {
 }
 
 import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/get_fallback_func.lua", trusted, {})
-local newInstance, getInstance = import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/newInstance.lua")
+local newInstance, getInstance = import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/newInstance.lua", trusted, {})
+
+import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/secure_gui.lua", trusted, {})
 
 getgenv().newInstance = newInstance
 getgenv().getInstance = getInstance
