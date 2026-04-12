@@ -122,6 +122,7 @@ local newInstance, getInstance = import("https://raw.githubusercontent.com/Proph
 
 import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/secure_gui.lua", trusted, {})
 
+getgenv().get_instance_path = get_instance_path
 getgenv().newInstance = newInstance
 getgenv().getInstance = getInstance
 getgenv().newEnv = newEnv
