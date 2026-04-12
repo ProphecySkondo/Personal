@@ -3,7 +3,7 @@ local Global = (getgenv and getgenv())
             or shared
             or {}
 
-function get_fallback_func(t, f, fallback)
+local function get_fallback_func(t, f, fallback)
 	if type(f) == t then
 		return f
 	end
