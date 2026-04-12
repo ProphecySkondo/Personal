@@ -1,6 +1,4 @@
-local get_fallback_func = get_fallback_func or function()
-	print("[-] Expected get_fallback_func")
-end
+local get_fallback_func = get_fallback_func or assert(get_fallback_func, "[-] get_fallback_func isn't supported")
 
 local secure_gui = get_fallback_func("function", get_hidden_gui or gethui or function()
 	if getInstance("RobloxInternalFunctions") then
@@ -15,4 +13,5 @@ local secure_gui = get_fallback_func("function", get_hidden_gui or gethui or fun
 	return Protected
 end)
 
+getgenv().secure_gui = secure_gui
 return secure_gui
