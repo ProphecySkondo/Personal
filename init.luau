@@ -116,6 +116,7 @@ local trusted = {
 
 }
 
+imoprt("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/get_instance_path.lua", trusted, {})
 import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/get_fallback_func.lua", trusted, {})
 local newInstance, getInstance = import("https://raw.githubusercontent.com/ProphecySkondo/Personal/refs/heads/main/newInstance.lua", trusted, {})
 
