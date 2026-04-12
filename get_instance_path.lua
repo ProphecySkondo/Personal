@@ -25,4 +25,6 @@ local function get_instance_path(Inst: Instance)
 	end
 end
 
+getgenv().get_instance_path = get_instance_path
+
 return get_instance_path
