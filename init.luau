@@ -49,8 +49,8 @@ local function newEnv(custom, blacklist)
     end
 
     for key, _ in pairs(blacklist) do
-        if type(value) == "function" or (value ~= true and value ~= false and value ~= nil) then
-			env[key] = value
+        if type(_) == "function" or (_ ~= true and _ ~= false and _ ~= nil) then
+			env[key] = _
 		else
 			env[key] = nil
 		end
@@ -60,8 +60,8 @@ local function newEnv(custom, blacklist)
         __index = function(self, key)
 			if blacklist[key] == true or blacklist[key] == false then
                 return nil
-			elseif bl ~= nil then
-				return bl
+			elseif blacklist[key] ~= nil then
+				return blacklist[key]
             end
             return rawget(self, key) or getfenv(1)[key]
         end,
