@@ -1,6 +1,4 @@
-loadedInstances = loadedInstances or function()
-  warn("[-] loadedInstances table wasn't found")
-end
+loadedInstances = loadedInstances or assert(loadedInstances, "[-] loadedInstances isn't supported")
 
 local function newInstance(Name, Properties, Bool: boolean)
 	local instance = Instance.new(Properties.className)
