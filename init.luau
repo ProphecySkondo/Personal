@@ -69,16 +69,17 @@ local function newEnv(custom, blacklist)
     })
 end
 
-local function makeGameProxy(overrides)
+local function makeGameProxy(overrides, fallbackGame)
+	fallbackGame = fallbackGame or game
     return setmetatable({}, {
         __index = function(_, key)
             if overrides[key] then
                 return overrides[key]
             end
-            return game[key]
+            return fallbackGame[key]
         end,
         __newindex = function(_, key, value)
-            game[key] = value
+            fallbackGame[key] = value
         end,
         __metatable = "The metatable is locked"
     })
